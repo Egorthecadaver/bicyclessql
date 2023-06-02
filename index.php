@@ -71,7 +71,7 @@ require "dbconnect.php";
 <?php
 echo "<h2>Интернет-магазин</h2>";
 
-$result = $conn->query("SELECT * FROM items");
+$result = $conn->query("SELECT * FROM products");
 
 while ($row = $result->fetch()){
     ?>
@@ -80,13 +80,13 @@ while ($row = $result->fetch()){
             <img src="img/bodylogo.png" width="60px">
         </div>
         <div class="name">
-            <?=$row['name']?>
+            <?=$row['prodname']?>
         </div>
         <div class="props">
-            <?=$row['properties']?>
+            <?=$row['color']?>
         </div>
         <div class="price">
-            <?=$row['price']?>
+            <?=$row['costpday']?>
             <button class="bin-button"><i class="fa fa-cart-plus"></i>&nbsp&nbsp В корзину</button>
         </div>
     </div>
