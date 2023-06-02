@@ -7,7 +7,7 @@ if (file_exists(__DIR__."/.env"))
     $dotenv->load(); //все параметры окружения помещаются в массив $_ENV
 }
 try {
-    $conn = new PDO("mysql:host=".$_ENV['dbhost'].";dbname=".$_ENV['dbname'].";charset=utf8mb4", $_ENV['root'], $_ENV['dbpassword']);
+    $conn = new PDO("mysql:host=".$_ENV['localhost'].";dbname=".$_ENV['bicycles'].";charset=utf8mb4", $_ENV['root'], $_ENV['dbpassword']);
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
